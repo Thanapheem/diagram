@@ -30,6 +30,4 @@ number matching_score
 number suggest_score
 number suggest_position
 }
-}
-
 ```
