@@ -1,17 +1,17 @@
 ```mermaid
 erDiagram
 applicants ||--|{positions: has
-applicants }|--|{ raking: has
-positions }|--|| raking: ""
+applicants }|--|{ ranking: has
+positions }|--|| ranking: ""
 applicants {
 number id pk "auto increment"
-string name "Full name"
+string name   "Full name"
 string phone_number 
 string position_id 
 string source "platform jobsdb or jobtopgun"
-string edu_institution "Universitiy"
-string edu_major ""
-string edu_program ""
+string edu_institution "สถานศึกษา"
+string edu_faculty "คณะ"
+string edu_major "สาขา" 
 float gpa
 string graduated_year ""
 number work_experience 
@@ -23,12 +23,13 @@ string postion_name
 string job_descriptions
 json skill
 }
-raking {
+ranking {
 number id
 number applicant_id
-string matching_score
+number matching_score
 number suggest_score
 number suggest_position
+}
 }
 
 ```
