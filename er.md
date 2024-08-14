@@ -7,7 +7,9 @@ applicants {
 number id pk "auto increment"
 string name   "Full name"
 string phone_number 
-string position_id 
+string position_id
+string email
+string status
 string source "platform jobsdb or jobtopgun"
 string edu_institution "สถานศึกษา"
 string edu_faculty "คณะ"
