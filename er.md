@@ -18,7 +18,7 @@ string edu_major "สาขา"
 float gpa "3.15"
 string graduated_year "2022"
 json work_experience ""
-datetime created_at  "10-11-2022"
+datetime created_date  "10-11-2022"
 }
 positions {
 number position_id PK "auto increment"
