@@ -10,9 +10,14 @@ string position_id FK"auto increment"
 string email "abc@gmail.com"
 string status "Called"
 string source "platform jobsdb or jobtopgun"
-string edu_institution "สถานศึกษา"
-string edu_faculty "คณะ"
-string edu_major "สาขา"
+json educations "[
+  {
+    'university': 'University Of Phayao',
+    'faculty': 'Bachelor of Computer Engineering',
+    'gpa': 202
+  },
+  ...
+]"
 float gpa "3.15"
 string graduated_year "2022"
 json work_experience ""
@@ -24,6 +29,7 @@ string matching_desc "Detail about why score be like this"
 number suggest_score "78%"
 number suggest_position "Software Engineer"
 string suggest_desc "Detail about why suggest this position"
+json skills "list of relevant skills"
 }
 positions {
 number position_id PK "auto increment"
@@ -31,5 +37,6 @@ string postion_name "Business Analyst"
 string job_descriptions "ASDFGH"
 json skill ""
 }
+
 
 ```
