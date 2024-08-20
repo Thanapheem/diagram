@@ -1,8 +1,6 @@
 ```mermaid
 erDiagram
 applicants ||--|{positions: has
-applicants }|--|{ ranking: has
-positions }|--|| ranking: ""
 applicants {
 number applicant_id PK "auto increment"
 string fname   "Apple"
@@ -18,7 +16,14 @@ string edu_major "สาขา"
 float gpa "3.15"
 string graduated_year "2022"
 json work_experience ""
+number expected_salary "25000"
 datetime created_date  "10-11-2022"
+number applicant_id FK "auto increment"
+number matching_score "44%"
+string matching_desc "Detail about why score be like this"
+number suggest_score "78%"
+number suggest_position "Software Engineer"
+string suggest_desc "Detail about why suggest this position"
 }
 positions {
 number position_id PK "auto increment"
@@ -26,11 +31,5 @@ string postion_name "Business Analyst"
 string job_descriptions "ASDFGH"
 json skill ""
 }
-ranking {
-number rank_id PK "auto increment"
-number applicant_id FK "auto increment"
-number matching_score "44%"
-number suggest_score "78%"
-number suggest_position "Software Engineer"
-}
+
 ```
